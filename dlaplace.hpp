@@ -8,7 +8,7 @@
   template <class Type>
   Type dlaplace(Type x, Type mu=0, Type scale=1, int give_log=0)
   {
-    Type logres = -(log(2) + log(scale) + pow((x-mu)/scale,2));
+    Type logres = -(log(2) + log(scale) + sqrt(pow((x-mu),2))/scale);
 
     if(!give_log) return exp(logres);
     else return logres;
