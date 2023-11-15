@@ -8,7 +8,7 @@
   template <class Type>
   Type dlaplace(Type x, Type mu=0, Type scale=1, int give_log=0)
   {
-    Type logres = -(log(2) + log(scale) + abs(Type(x-mu))/scale);
+    Type logres = -(log(2) + log(scale) + std::abs(Type(x-mu))/scale);
     if(!give_log) return exp(logres);
     else return logres;
   }
