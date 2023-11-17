@@ -13,10 +13,10 @@
     Type expon1  = pow(sqrt(pow((x - mu),2)),p);
     Type expon2  = p * pow(sigmap,p);
     
-    Type res = (1/cost) * exp(-expon1/expon2);
+    Type logres = -(log(2) + log(p)/p + lgamma(1+1/p) + log(sigmap) + expon1/expon2 );
 
-    if(!give_log) return res;
-    else return log(res);
+    if(!give_log) return exp(logres);
+    else return res;
   }
   
   // Vectorize dexppow
