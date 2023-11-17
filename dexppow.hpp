@@ -16,7 +16,7 @@
     Type logres = -(log(2) + log(p)/p + lgamma(1+1/p) + log(sigmap) + expon1/expon2 );
 
     if(!give_log) return exp(logres);
-    else return res;
+    else return logres;
   }
   
   // Vectorize dexppow
