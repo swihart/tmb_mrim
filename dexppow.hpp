@@ -9,7 +9,7 @@
   Type dexppow(Type x, Type mu=0, Type sigmap=1, Type p=2, int give_log=0)
   {
 
-    Type cost    = 2 * pow(p,1/p) * gamma(1 + 1/p) * sigmap;
+    /*Type cost    = 2 * pow(p,1/p) * gamma(1 + 1/p) * sigmap;*/
     Type expon1  = pow(sqrt(pow((x - mu),2)),p);
     Type expon2  = p * pow(sigmap,p);
     
